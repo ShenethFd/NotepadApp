@@ -5,44 +5,43 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url('background-image.jpg'); /* Replace with your image path */
-    background-size: cover;
-    background-position: center;
-    color: #333;
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text for contrast */
     flex-direction: column; /* Added to stack elements vertically */
 }
 
 .transparent-btn {
     padding: 15px 30px;
     font-size: 18px;
-    border: 2px solid #333;
+    border: 2px solid #ffffff;
     background-color: transparent;
-    color: #333;
+    color: #ffffff;
     cursor: pointer;
     border-radius: 8px;
     transition: all 0.3s ease;
 }
 
 .transparent-btn:hover {
-    background-color: #333;
-    color: #fff;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 .container {
-    background-color: rgba(255, 255, 255, 0.8); /* Added a semi-transparent background to the container for readability */
+    background-color: rgba(255, 255, 255, 0.95); /* More opaque on black background */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
     text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 h1 {
-    color: #333;
+    color: #000000; /* Black text on white container */
     margin-bottom: 10px;
 }
 
 p {
-    color: #555;
+    color: #333333; /* Dark gray text on white container */
     margin-bottom: 20px;
     font-size: 1.1em;
 }

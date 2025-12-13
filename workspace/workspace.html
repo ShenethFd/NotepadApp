@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NoteFlow | Workspace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="workspace">
+
+    <!-- Empty State -->
+    <div id="emptyState" class="empty-state">
+        <button id="firstNoteBtn" class="primary-btn">
+            Add your first note here
+        </button>
+    </div>
+
+    <!-- Editor -->
+    <div id="editorState" class="editor hidden">
+        <!-- Toolbar -->
+        <div class="editor-toolbar">
+            <div class="toolbar-group">
+                <button class="toolbar-btn" data-command="bold" title="Bold">
+                    <strong>B</strong>
+                </button>
+                <button class="toolbar-btn" data-command="italic" title="Italic">
+                    <em>I</em>
+                </button>
+                <button class="toolbar-btn" data-command="underline" title="Underline">
+                    <u>U</u>
+                </button>
+            </div>
+
+            <div class="toolbar-group">
+                <button class="toolbar-btn" data-command="align-left" title="Align Left">
+                    ⬅️
+                </button>
+                <button class="toolbar-btn" data-command="align-center" title="Align Center">
+                    ⬌
+                </button>
+                <button class="toolbar-btn" data-command="align-right" title="Align Right">
+                    ➡️
+                </button>
+            </div>
+
+            <div class="toolbar-group">
+                <select class="toolbar-select" data-command="heading" title="Heading Level">
+                    <option value="">Normal</option>
+                    <option value="h1"># Heading 1</option>
+                    <option value="h2">## Heading 2</option>
+                    <option value="h3">### Heading 3</option>
+                    <option value="h4">#### Heading 4</option>
+                </select>
+            </div>
+
+            <div class="toolbar-group">
+                <select class="toolbar-select" data-command="font-size" title="Font Size">
+                    <option value="small">Small</option>
+                    <option value="normal" selected>Normal</option>
+                    <option value="large">Large</option>
+                    <option value="xlarge">Extra Large</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="title-input-container">
+            <input type="text" id="noteTitleInput" placeholder="Note title..." maxlength="100">
+        </div>
+        <textarea id="noteEditor" placeholder="Start writing..."></textarea>
+        <button id="saveBtn" class="primary-btn">Save Note</button>
+    </div>
+
+    <!-- Notes Grid -->
+    <div id="notesGrid" class="notes-grid hidden">
+        <div class="notes-container">
+            <!-- Notes will be dynamically added here -->
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
